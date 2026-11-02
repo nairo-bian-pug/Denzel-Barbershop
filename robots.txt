@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: Sitemap: https://nairo-bian-pug.github.io/Denzel-Barbersho-/sitemap.xml
+Sitemap: Sitemap: https://nairo-bian-pug.github.io/Denzel-Barbershop/sitemap.xml
