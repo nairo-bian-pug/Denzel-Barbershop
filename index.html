@@ -13,7 +13,9 @@ box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:en
 :root[data-theme="dark"]{--bg:#0f1626;--surface:#17213a;--ink:#eef0f5;--muted:#b4bccb;--red:#ff6b5f;--line:#2b3957;--band:#0a1020;--on-band:#eef0f5;color-scheme:dark}
 html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:"Work Sans",system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.6;font-size:17px}
+img{max-width:100%;height:auto}
+html,body{max-width:100%}
+body{margin:0;overflow-wrap:break-word;background:var(--bg);color:var(--ink);font-family:"Work Sans",system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.6;font-size:17px}
 h1,h2,h3{font-family:"Oswald","Arial Narrow",Impact,sans-serif;line-height:1.1;margin:0 0 .5em;letter-spacing:.01em}
 h1{font-size:clamp(2.2rem,6vw,3.8rem);font-weight:700}
 h2{font-size:clamp(1.6rem,3.5vw,2.2rem);font-weight:600}
@@ -34,11 +36,12 @@ section{padding:48px 0;border-bottom:1px solid var(--line)}
 figure{margin:0}
 figure img{width:100%;height:auto;border-radius:6px;display:block;border:1px solid var(--line)}
 figcaption{font-size:.85rem;color:var(--muted);margin-top:6px}
-.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(min(240px,100%),1fr))}
+.hero>*,.grid>*{min-width:0}
 .card{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:20px}
 .card p{margin:0;color:var(--muted)}
 .wrap{overflow-x:auto}
-table{border-collapse:collapse;width:100%;min-width:320px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:0;background:var(--surface)}
 th,td{text-align:left;padding:12px 14px;border-bottom:1px solid var(--line)}
 th{font-family:"Oswald",sans-serif;font-weight:500}
 td:last-child,th:last-child{text-align:right;white-space:nowrap}
@@ -48,7 +51,7 @@ footer a{color:var(--on-band)}
 details.practice{margin:40px 0;background:var(--surface);border:2px dashed var(--red);border-radius:6px;padding:16px 20px}
 details.practice summary{cursor:pointer;font-weight:600}
 details.practice li{margin:6px 0}
-@media (max-width:700px){.hero{grid-template-columns:1fr}}
+@media (max-width:700px){.hero{grid-template-columns:minmax(0,1fr)}}
 </style>
 </head>
 <body>
